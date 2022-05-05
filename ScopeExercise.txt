@@ -1,0 +1,66 @@
+1. Determine what this Javascript code will print out (without running it):
+    10889101
+
+2. What is the difference between a method and function?
+    function :- a block of code written to perform a specific task
+    method :- a property of object which has function definition
+              function stored as property of object
+
+3. What does 'this' refer to when used in a Java method?
+    to the current object
+
+4. What does 'this' refer to when used in a JavaScript method?
+     to the owner object of the method
+
+5. What does 'this' refer to when used in a JavaScript constructor function?
+    to newly created object
+
+6. Assume object x is the prototype for object y in Javascript. Object x has a method f( ) containing keyword 'this'.
+When f is called by x.f( ), what does 'this' refer to?
+        x
+
+7. What is a free variable in JavaScript?
+
+    A variable referred to by a function that is not one of its parameters or local variables.
+
+8. Create an object that has properties with name = "fred" and major="music" and a property that is a function
+that takes 2 numbers and returns the smallest of the two, or the square of the two if they are equal.
+    let obj1 = {
+        name : "fred",
+        major : "music",
+        cal : function(a, b){
+                if(a != b){
+                    return a > b ? a : b;
+                }
+                return a * b;
+            }
+    }
+9. Write Javascript code for creating three Employee objects using the "new" keyword and a constructor function.
+Employee objects have the following fields: name, salary, position.
+
+    function Employee(name, salary, position){
+        this.name = name;
+        this.salary = salary;
+        this.position = position;
+    }
+    //Example of 3 objects
+    var john = new Employee("John", 1000, "CEO"); 
+    var smith = new Employee("Smith", 2000, "CTO"); 
+    var alice = new Employee("Alice", 3000, "CFO"); 
+
+10. Write a Javascript function that takes any number of input arguments and returns the product of the
+arguments
+
+   function sum(...args){
+        return args.reduce((total, el) => {return total + el});
+    }
+
+11. Write an arrow function that returns the maximum of its three input arguments.
+
+    (a, b, c) => {
+        let max;
+        if(a > b){
+            return a > c ? a : c;
+        }
+        return b > c ? b : c;
+    }
